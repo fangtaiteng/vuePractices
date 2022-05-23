@@ -5,6 +5,8 @@ import Home from '@/views/Home'
 import Category from '@/views/Category'
 import Order from '@/views/Order'
 import My from '@/views/My'
+import Mysport from '@/views/second/MySport'
+import Yoursport from '@/views/second/YourSport'
 Vue.use(VueRouter)    //注册全局组件RouterLink，RouterView
 const routes = [
   {
@@ -13,7 +15,18 @@ const routes = [
   },
   {
     path:'/Home',
-    component: Home
+    component: Home,
+    redirect: '/Home/my-sport',
+    children: [
+      {
+        path:'my-sport',
+        component: Mysport,
+      },
+      {
+        path:'your-sport',
+        component: Yoursport,
+      },
+    ]
   },
   {
     path:'/Category',

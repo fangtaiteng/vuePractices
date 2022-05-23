@@ -38,7 +38,7 @@
       "vue/multi-word-component-names": [
         "error",
         {
-          "ignores": ["Home","Category","My","Order"]
+          "ignores": ["Home","Category","My","Order","MySport","YourSport"]
         }
       ]
     }
